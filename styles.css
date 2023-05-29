@@ -19,9 +19,12 @@ body {
   width: 350px;
 }
 
+.popup :where(.picker, header) {
+  display: flex;
+}
+
 .popup .picker {
   padding: 30px 0;
-  display: flex;
   justify-content: center;
   background-color: #e4f2fd;
 }
