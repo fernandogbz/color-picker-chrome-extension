@@ -43,3 +43,7 @@ body {
 .picked-colors{
   margin: 10px 15px;
 }
+
+.picked-colors header {
+  justify-content: space-between;
+}
