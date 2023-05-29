@@ -58,3 +58,10 @@ body {
 .all-colors {
   margin: 10px 0;
 }
+
+.all-colors .color .rect {
+  display: block;
+  height: 22px;
+  width: 22px;
+  background-color: #5372f0;
+}
