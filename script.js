@@ -4,8 +4,8 @@ const colorPickerBtn = document.querySelector("#color-picker");
 const activateEyeDropper = async () => {
   try {
     const eyeDropper = new EyeDropper(); // Creating a new eye dropper object. It's used to select colors from the screen
-    const response = await eyeDropper.open();
-    console.log(response)
+    const { sRGBHex } = await eyeDropper.open();
+    console.log(sRGBHex)
   } catch(error) {
     console.log(error);
   }
