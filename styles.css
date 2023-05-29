@@ -21,6 +21,7 @@ body {
 
 .popup :where(.picker, header) {
   display: flex;
+  align-items: center;
 }
 
 .popup .picker {
@@ -52,4 +53,8 @@ body {
   color: #5372f0;
   cursor: pointer;
   font-size: 0.9rem;
+}
+
+.all-colors {
+  margin: 10px 0;
 }
