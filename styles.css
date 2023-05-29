@@ -19,7 +19,7 @@ body {
   width: 350px;
 }
 
-.popup :where(.picker, header) {
+.popup :where(.picker, header, .color) {
   display: flex;
   align-items: center;
 }
@@ -59,9 +59,15 @@ body {
   margin: 10px 0;
 }
 
+.all-colors .color {
+  cursor: pointer;
+}
+
 .all-colors .color .rect {
   display: block;
   height: 22px;
   width: 22px;
+  margin-right: 8px;
+  border-radius: 5px;
   background-color: #5372f0;
 }
