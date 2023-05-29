@@ -71,3 +71,9 @@ body {
   border-radius: 5px;
   background-color: #5372f0;
 }
+
+.all-colors .color .value {
+  font-size: 0.96rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
