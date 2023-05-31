@@ -2,6 +2,7 @@
 Technologies:
 <br>
 • HTML
+• CSS
 
 
 Link: 
