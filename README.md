@@ -2,7 +2,10 @@
 Technologies:
 <br>
 • HTML
+<br>
 • CSS
+<br>
+• JavaScript
 
 
 Link: 
