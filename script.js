@@ -1,9 +1,9 @@
 //Getting variables
 const colorPickerBtn = document.querySelector("#color-picker");
-const pickedColors = [];
+const pickedColors = JSON.parse(localStorage.getItem("picked-colors") || "[]"); // Getting the chosen colors from local storage or an empty array
 
 const showColors = () => {
-  
+
 }
 
 const activateEyeDropper = async () => {
