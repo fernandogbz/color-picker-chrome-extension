@@ -6,10 +6,11 @@ const showColors = () => {
   const liTag = pickedColors.map(color => 
     `
     <li class="color">
-		  <span class="rect"></span>
-			<span class="value">#5372f0</span>
-	  </li>
-    `)
+      <span class="rect"></span>
+      <span class="value">${color}</span>
+    </li>
+    `).join("");
+    console.log(liTag);
 }
 
 const activateEyeDropper = async () => {
