@@ -3,7 +3,13 @@ const colorPickerBtn = document.querySelector("#color-picker");
 const pickedColors = JSON.parse(localStorage.getItem("picked-colors") || "[]"); // Getting the chosen colors from local storage or an empty array
 
 const showColors = () => {
-
+  const liTag = pickedColors.map(color => 
+    `
+    <li class="color">
+		  <span class="rect"></span>
+			<span class="value">#5372f0</span>
+	  </li>
+    `)
 }
 
 const activateEyeDropper = async () => {
