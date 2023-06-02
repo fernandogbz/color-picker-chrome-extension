@@ -1,5 +1,6 @@
 //Getting variables
 const colorPickerBtn = document.querySelector("#color-picker");
+const colorList = document.querySelector(".all-colors");
 const pickedColors = JSON.parse(localStorage.getItem("picked-colors") || "[]"); // Getting the chosen colors from local storage or an empty array
 
 const showColors = () => {
