@@ -9,12 +9,12 @@ const activateEyeDropper = async () => {
     navigator.clipboard.writeText(sRGBHex); // Copy the selected color to the clipboard
 
     pickedColors.push(sRGBHex); // Selected color added to the pickedColors array
-    console.log(pickedColors);
+
+    // Store picked colors to localstorage and show them
+    localStorage.setItem("picked-colors", JSON.stringify(pickedColors)); // picked.colors is the name of item and second is the value
   } catch(error) {
     console.log(error);
   }
 }
 
 colorPickerBtn.addEventListener("click", activateEyeDropper);
-
-// Store picked colors to localstorage and show them
