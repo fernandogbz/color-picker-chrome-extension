@@ -2,6 +2,10 @@
 const colorPickerBtn = document.querySelector("#color-picker");
 const pickedColors = [];
 
+const showColors = () => {
+  
+}
+
 const activateEyeDropper = async () => {
   try {
     const eyeDropper = new EyeDropper(); // Creating a new eye dropper object. It's used to select colors from the screen
@@ -12,6 +16,7 @@ const activateEyeDropper = async () => {
 
     // Store picked colors to localstorage and show them
     localStorage.setItem("picked-colors", JSON.stringify(pickedColors)); // picked.colors is the name of item and second is the value
+    showColors();
   } catch(error) {
     console.log(error);
   }
