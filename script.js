@@ -7,11 +7,14 @@ const showColors = () => {
   colorList.innerHTML = pickedColors.map(color => 
     `
     <li class="color">
-      <span class="rect" style="background: ${color}"></span>
+      <span class="rect" style="background: ${color}; border: 1px solid ${color == "#ffffff" ? "#ccc" : color}"></span> 
       <span class="value">${color}</span>
     </li>
     `).join(""); // Generating li for the picked color and adding it to the colorList
+    //span rect border = if color is equal to #fff(white), add the gray border, else add the picked color border
 }
+
+showColors();
 
 const activateEyeDropper = async () => {
   try {
