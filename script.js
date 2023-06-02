@@ -4,14 +4,13 @@ const colorList = document.querySelector(".all-colors");
 const pickedColors = JSON.parse(localStorage.getItem("picked-colors") || "[]"); // Getting the chosen colors from local storage or an empty array
 
 const showColors = () => {
-  const liTag = pickedColors.map(color => 
+  colorList.innerHTML = pickedColors.map(color => 
     `
     <li class="color">
       <span class="rect"></span>
       <span class="value">${color}</span>
     </li>
-    `).join("");
-    console.log(liTag);
+    `).join(""); // Generating li for the picked color and adding it to the colorList
 }
 
 const activateEyeDropper = async () => {
