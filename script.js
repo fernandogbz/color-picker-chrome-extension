@@ -7,7 +7,7 @@ const showColors = () => {
   colorList.innerHTML = pickedColors.map(color => 
     `
     <li class="color">
-      <span class="rect"></span>
+      <span class="rect" style="background: ${color}"></span>
       <span class="value">${color}</span>
     </li>
     `).join(""); // Generating li for the picked color and adding it to the colorList
