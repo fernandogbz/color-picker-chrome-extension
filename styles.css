@@ -28,7 +28,8 @@ body {
 .popup .picker {
   padding: 30px 0;
   justify-content: center;
-  background-color: #e4f2fd;
+  background-color: #181a1b;
+  border-radius: 10px;
 }
 
 .picker #color-picker {
