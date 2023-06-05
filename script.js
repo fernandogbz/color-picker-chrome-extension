@@ -22,11 +22,14 @@ const activateEyeDropper = async () => {
     const { sRGBHex } = await eyeDropper.open(); // Waiting to open the eyeDropper to get the color
     navigator.clipboard.writeText(sRGBHex); // Copy the selected color to the clipboard
 
-    pickedColors.push(sRGBHex); // Selected color added to the pickedColors array
+    // Adding the color to the list if it doesn't already exist
+    if(!pickedColors.includes(sRGBHex)){
+      pickedColors.push(sRGBHex); // Selected color added to the pickedColors array
 
-    // Store picked colors to localstorage and show them
-    localStorage.setItem("picked-colors", JSON.stringify(pickedColors)); // picked.colors is the name of item and second is the value
-    showColors();
+      // Store picked colors to localstorage and show them
+      localStorage.setItem("picked-colors", JSON.stringify(pickedColors)); // picked.colors is the name of item and second is the value
+      showColors();
+    }
   } catch(error) {
     console.log(error);
   }
