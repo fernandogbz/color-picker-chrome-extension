@@ -13,8 +13,9 @@ const showColors = () => {
     `).join(""); // Generating li for the picked color and adding it to the colorList
     //span rect border = if color is equal to #fff(white), add the gray border, else add the picked color border
     
+    // Click event listener added to each color element to copu the color code
     document.querySelectorAll(".color").forEach(li => {
-      li.addEventListener("click")
+      li.addEventListener("click", e => copyColor(e.currentTarget.lastElementChild));
     })
 }
 
