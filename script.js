@@ -14,7 +14,7 @@ const showColors = () => {
     //span rect border = if color is equal to #fff(white), add the gray border, else add the picked color border
     
     document.querySelectorAll(".color").forEach(li => {
-      
+      li.addEventListener("click")
     })
 }
 
