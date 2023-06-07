@@ -12,6 +12,8 @@ const showColors = () => {
     </li>
     `).join(""); // Generating li for the picked color and adding it to the colorList
     //span rect border = if color is equal to #fff(white), add the gray border, else add the picked color border
+    
+    document.querySelectorAll(".color")
 }
 
 showColors();
@@ -36,3 +38,5 @@ const activateEyeDropper = async () => {
 }
 
 colorPickerBtn.addEventListener("click", activateEyeDropper);
+
+// Copy the color code on click
