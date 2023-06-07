@@ -13,7 +13,9 @@ const showColors = () => {
     `).join(""); // Generating li for the picked color and adding it to the colorList
     //span rect border = if color is equal to #fff(white), add the gray border, else add the picked color border
     
-    document.querySelectorAll(".color")
+    document.querySelectorAll(".color").forEach(li => {
+      
+    })
 }
 
 showColors();
