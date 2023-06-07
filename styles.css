@@ -49,6 +49,7 @@ body {
 
 .picked-colors header {
   justify-content: space-between;
+  color: #fff;
 }
 
 .picked-colors .clear-all {
