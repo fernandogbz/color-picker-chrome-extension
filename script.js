@@ -6,6 +6,7 @@ const pickedColors = JSON.parse(localStorage.getItem("picked-colors") || "[]"); 
 const copyColor = elem => {
   navigator.clipboard.writeText(elem.dataset.color); // copying the data-color value of span
   elem.innerText = "Copied"; //updating the color text to "copied"
+  setTimeout(() => elem.innerText = elem.dataset.color, 1000); // after 1000ms, the text will revert back to the color code
 }
 
 const showColors = () => {
