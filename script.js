@@ -48,7 +48,11 @@ const activateEyeDropper = async () => {
   }
 }
 
-clearAll.addEventListener("click", clearAllColors);
-colorPickerBtn.addEventListener("click", activateEyeDropper);
+// Clearing all picked colors and updating localstorage
+const clearAllColors = () => {
+  pickedColors.length = 0;
+  localStorage.setItem("picked-colors", JSON.stringify(pickedColors));
+}
 
-// Remove all colors on "Clear All" click
+clearAll.addEventListener("click", clearAllColors); // Remove all colors on "Clear All"
+colorPickerBtn.addEventListener("click", activateEyeDropper);
