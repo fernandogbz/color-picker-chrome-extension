@@ -1,8 +1,10 @@
 //Getting variables
 const colorPickerBtn = document.querySelector("#color-picker");
 const colorList = document.querySelector(".all-colors");
+const clearAll = document.querySelector(".clear-all");
 const pickedColors = JSON.parse(localStorage.getItem("picked-colors") || "[]"); // Getting the chosen colors from local storage or an empty array
 
+// Copy the color code on click
 const copyColor = elem => {
   navigator.clipboard.writeText(elem.dataset.color); // copying the data-color value of span
   elem.innerText = "Copied"; //updating the color text to "copied"
@@ -48,4 +50,4 @@ const activateEyeDropper = async () => {
 
 colorPickerBtn.addEventListener("click", activateEyeDropper);
 
-// Copy the color code on click
+// Remove all colors on "Clear All" click
