@@ -48,6 +48,7 @@ const activateEyeDropper = async () => {
   }
 }
 
+clearAll.addEventListener("click", clearAllColors);
 colorPickerBtn.addEventListener("click", activateEyeDropper);
 
 // Remove all colors on "Clear All" click
