@@ -4,7 +4,7 @@ const colorList = document.querySelector(".all-colors");
 const pickedColors = JSON.parse(localStorage.getItem("picked-colors") || "[]"); // Getting the chosen colors from local storage or an empty array
 
 const copyColor = elem => {
-  console.log(elem);
+  navigator.clipboard.writeText(elem.dataset.color); // copying the data-color value of span
 }
 
 const showColors = () => {
