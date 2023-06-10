@@ -33,6 +33,7 @@ const showColors = () => {
 showColors();
 
 const activateEyeDropper = async () => {
+  document.body.style.display = "none";
   try {
     const eyeDropper = new EyeDropper(); // Creating a new eye dropper object. It's used to select colors from the screen
     const { sRGBHex } = await eyeDropper.open(); // Waiting to open the eyeDropper to get the color
@@ -41,14 +42,15 @@ const activateEyeDropper = async () => {
     // Adding the color to the list if it doesn't already exist
     if(!pickedColors.includes(sRGBHex)){
       pickedColors.push(sRGBHex); // Selected color added to the pickedColors array
-
+      
       // Store picked colors to localstorage and show them
       localStorage.setItem("picked-colors", JSON.stringify(pickedColors)); // picked.colors is the name of item and second is the value
       showColors();
     }
   } catch(error) {
-    console.log(error);
+    console.log("Failed to copy the color code");
   }
+  document.body.style.display = "block";
 }
 
 // Clearing all picked colors, updating localstorage and hidiing the pickedColors element
