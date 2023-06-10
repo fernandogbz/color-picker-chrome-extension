@@ -7,5 +7,7 @@ Technologies:
 <br>
 • JavaScript
 
+Preview: 
+<br>
+![color-picker-extension](https://github.com/fernandogbz/color-picker-chrome-extension/assets/112293116/0a802cfb-876f-417a-8ccc-31b3643f2b1f)
 
-Link: 
