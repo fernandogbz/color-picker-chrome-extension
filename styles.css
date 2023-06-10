@@ -8,14 +8,6 @@
   font-family: 'Poppins', sans-serif;
 }
 
-body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  background:linear-gradient(#181a1b 10%, #377dff);
-}
-
 .popup {
   width: 350px;
 }
@@ -28,8 +20,7 @@ body {
 .popup .picker {
   padding: 30px 0;
   justify-content: center;
-  background-color: #181a1b;
-  border-radius: 10px;
+  background-color: #e4f2fe;
 }
 
 .picker #color-picker {
@@ -53,7 +44,10 @@ body {
 
 .picked-colors header {
   justify-content: space-between;
-  color: #fff;
+}
+
+.picked-colors header .title {
+  font-size: 1rem;
 }
 
 .picked-colors .clear-all {
