@@ -12,6 +12,7 @@ const copyColor = elem => {
 }
 
 const showColors = () => {
+  if(!pickedColors.length) return; // Returning if there are no picked colors
   colorList.innerHTML = pickedColors.map(color => 
     `
     <li class="color">
@@ -21,8 +22,8 @@ const showColors = () => {
     `).join(""); // Generating li for the picked color and adding it to the colorList
     //span rect border = if color is equal to #fff(white), add the gray border, else add the picked color border
     
-    document.querySelector(".picked-colors").classList.remove("hide"); // Hide colors wrapper if there aren't any colors to show
-
+    document.querySelector(".picked-colors").classList.remove("hide"); // Show colors
+    
     // Click event listener added to each color element to copu the color code
     document.querySelectorAll(".color").forEach(li => {
       li.addEventListener("click", e => copyColor(e.currentTarget.lastElementChild));
@@ -36,7 +37,7 @@ const activateEyeDropper = async () => {
     const eyeDropper = new EyeDropper(); // Creating a new eye dropper object. It's used to select colors from the screen
     const { sRGBHex } = await eyeDropper.open(); // Waiting to open the eyeDropper to get the color
     navigator.clipboard.writeText(sRGBHex); // Copy the selected color to the clipboard
-
+    
     // Adding the color to the list if it doesn't already exist
     if(!pickedColors.includes(sRGBHex)){
       pickedColors.push(sRGBHex); // Selected color added to the pickedColors array
@@ -50,10 +51,12 @@ const activateEyeDropper = async () => {
   }
 }
 
-// Clearing all picked colors and updating localstorage
+// Clearing all picked colors, updating localstorage and hidiing the pickedColors element
 const clearAllColors = () => {
   pickedColors.length = 0;
   localStorage.setItem("picked-colors", JSON.stringify(pickedColors));
+  
+  document.querySelector(".picked-colors").classList.add("hide"); // Hide colors wrapper if there aren't any colors to show
 }
 
 clearAll.addEventListener("click", clearAllColors); // Remove all colors on "Clear All"
